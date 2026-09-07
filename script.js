@@ -67,7 +67,9 @@ document.addEventListener('DOMContentLoaded', function () {
         btn.addEventListener('click', function () {
             console.log('Outbound affiliate click triggered for novis23 / shedplans');
             if (typeof window.fbq === 'function') {
-                window.fbq('track', 'Lead', { content_name: 'Ryan Shed Plans ClickBank Hoplink' });
+                window.fbq('track', 'Lead', {
+                    lead_type: 'high_intent_click'
+                });
             }
         });
     });
